@@ -5,6 +5,7 @@
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "devDependencies": {
+    "@types/lodash-es": "^4.17.4",
     "@types/node": "^15.6.0",
     "@types/react": "^17.0.6",
     "@types/react-dom": "^17.0.5",
@@ -12,9 +13,10 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
-    "antd": "^4.15.6",
+    "@snowpack/plugin-react-refresh": "^2.5.0",
+    "lodash-es": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "taio": "^0.2.1"
+    "taio": "^0.4.0-rc"
   }
 }

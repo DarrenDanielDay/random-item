@@ -4,6 +4,7 @@ module.exports = {
     /* ... */
   },
   plugins: [
+    "@snowpack/plugin-react-refresh"
     /* ... */
   ],
   routes: [
