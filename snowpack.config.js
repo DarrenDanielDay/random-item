@@ -1,3 +1,4 @@
+// @ts-check
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
@@ -22,6 +23,8 @@ module.exports = {
     /* ... */
   },
   buildOptions: {
-    /* ... */
+    baseUrl: "/pages/random-item",
+    clean: true,
+    sourcemap: "inline"
   },
 };

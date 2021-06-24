@@ -1,28 +1,38 @@
-import React, { useEffect, useState } from "react";
-import { Button } from "@material-ui/core";
+import React, { useState } from "react";
+import { colors } from "@material-ui/core";
 import ReactDOM from "react-dom";
-import { LinkedStack } from "taio/build/data-structure/stack/linked-stack";
-import { debounce } from 'lodash-es'
+import { RandomItem } from "./random-item";
 const App: React.FC = () => {
-  useEffect(() => {
-    const stack = new LinkedStack<number>();
-    stack.push(1);
-    stack.push(2);
-    console.log([...stack]);
-  });
-  let [count, setCount] = useState(0);
-  setCount = debounce(setCount, 1000);
+  let [setting, setSetting] = useState(false);
   return (
-    <div>
-      Hello, React count = {count}
-      <Button
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        height: "100vh",
+      }}
+    >
+      <header
+        style={{
+          position: "fixed",
+          top: 0,
+          backgroundColor: colors.indigo[600],
+          color: "white",
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "3em",
+        }}
         onClick={() => {
-          setCount(count => count + 1)
+            setSetting(s => !s)
         }}
       >
-        material UI
-      </Button>
-      <div>{count}</div>
+        随机抽取小工具
+      </header>
+      <RandomItem settings={setting} />
     </div>
   );
 };
