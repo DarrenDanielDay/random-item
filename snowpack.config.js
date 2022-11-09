@@ -23,7 +23,7 @@ module.exports = {
     /* ... */
   },
   buildOptions: {
-    baseUrl: "/pages/random-item",
+    baseUrl: process.env.DEPLOY_BASE_URL || "/",
     clean: true,
     sourcemap: "inline"
   },
